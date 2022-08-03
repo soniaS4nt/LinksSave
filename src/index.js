@@ -7,13 +7,15 @@ const session = require('express-session');
 const MySQLStore = require('express-mysql-session');
 const { database } = require('./keys');
 const passport = require('passport');
+const { PORT } = require('./config');
+
 
 //Initializations
 const app = express();
 require('./lib/passport');
 
 //Settings
-app.set('port', process.env.PORT || 4000);
+app.set('port', PORT);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs.engine({
     defaultLayout: 'main',

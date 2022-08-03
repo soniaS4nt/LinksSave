@@ -3,29 +3,31 @@
 
     <div class="col-md-4 mx-auto">
       <form action="/signin" method="POST" class="card card">
-        <h3 class="text-center my-3">SignIn</h3>
-        {{!-- <img
+        <div class="card-header">
+          <h3 class="text-center my-3">SignIn</h3>
+        </div>
+        {{! <img
           src="/img/logo.png"
           alt="Logo"
           class="card-img-top mx-auto m-2 rounded-circle w-50"
-        /> --}}
+        /> }}
         <div class="card-body">
 
-          <label for="username">Write a Username:</label>
+          <label for="username">Username:</label>
           <input
             type="text"
             name="username"
-            placeholder="Username"
+            placeholder="Write a username"
             class="form-control mb-3"
             autofocus
           />
 
-          <label for="password">Write your Password:</label>
+          <label for="password">Password:</label>
           <div class="form-group">
             <input
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="Write your password"
               class="form-control mb-3"
             />
           </div>
@@ -34,6 +36,7 @@
           </button>
 
         </div>
+
       </form>
 
       {{! Link }}
